@@ -4,9 +4,10 @@ metadata:
   labels:
     app: cassandra
   name: cassandra
-spec:
-  clusterIP: None
+spec:  
   ports:
     - port: 9042
+      nodePort: 31942
   selector:
     app: cassandra
+  type: NodePort
